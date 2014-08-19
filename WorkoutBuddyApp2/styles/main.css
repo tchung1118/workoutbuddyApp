@@ -1,1 +1,28 @@
 .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
+
+#create-weight {
+    width: 50%;
+    margin: .3em 25% 0 25%;
+}
+
+#weight-listview .item-title {
+    float: left;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: .3em 1em 0 .6em;
+    width: 50%;
+}
+#weight-listview .item-info {
+    float: left;
+    font-size: .7em;
+    line-height: 1em;
+    margin: 0 0 0 .95em;
+    width: 45%;
+}
+
+#weight-listview .details-link {
+    margin-top: -1em;
+    position: absolute;
+    right: 0.6em;
+    top: 50%;
+}

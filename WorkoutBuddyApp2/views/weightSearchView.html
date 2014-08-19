@@ -1,0 +1,43 @@
+<div data-role="view" data-title="Weightlifting" data-use-native-scrolling="true" data-layout="main"
+     data-init="app.WeightSearch.init" data-show="app.WeightSearch.show" data-model="app.WeightSearch">
+    
+<div data-role="header">    <div data-role="navbar">
+        <span data-role="view-title">Weightlifting</span>
+        <a data-role="backbutton" data-align="left" data-transition="slide:right">Back</a>
+    <a href="views/weightSearchResultsView.html" data-role="button" data-align="right" data-transition="slide" data-click="app.WeightSearch.search">Search</a>
+                            </div>
+</div>    
+	<form action="./weightSearchView.html">
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label>Date
+                    <input type="date" id="weightDate" />
+                </label>
+            </li>
+            <li>
+                <label>Available From
+                    <input type="time" id="weightTimeFrom" />
+                </label>
+            </li>
+            <li>
+                <label>Available To
+                    <input type="time" id="weightTimeTo" />
+                </label>
+            </li>
+            <li>
+                <label>Duration (minutes)
+                    <input type="number" id="weightDuration"  />
+                </label>
+            </li>
+            <li>
+                <label>Primary Body Part
+                    <select id="weightPrimary">
+                        <option value="Chest">Chest</option>
+                        <option value="Back">Back</option>
+                        <option value="Legs">Legs</option>
+                    </select>
+                </label>
+            </li>
+        </ul>
+    </form>
+</div>
