@@ -3,15 +3,24 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="kendopro/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="kendopro/styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="kendopro/styles/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="kendopro/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <link href="kendopro/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
 
     <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>
+    <script src="kendopro/js/angular.min.js"></script>
+    <script src="kendopro/js/jquery.min.js"></script>
+    <script src="kendopro/js/kendo.all.min.js"></script>
 
+    <script src="scripts/settings.js"></script>
     <script src="scripts/app.js"></script>
-
+    <script src="scripts/weightSearch.js"></script>
+    <script src="scripts/weightSearchResults.js"></script>
+    <script src="scripts/createWeightRoom.js"></script>
 </head>
 <body>
  
@@ -25,6 +34,12 @@
 
     <!-- application views will be rendered here -->
     
+  	<div data-role="footer">
+        <div data-role="tabstrip" data-selected-index="1">
+      		<a data-role="button" data-icon="contacts" href="views/contacts.html">Profile</a>
+      		<a data-icon="favorites" href="views/home.html">WOB</a>
+    	</div>
+    </div>
   </div>
 
   <!-- application drawer and contents -->
