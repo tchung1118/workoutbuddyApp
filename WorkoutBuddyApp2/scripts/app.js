@@ -1,3 +1,4 @@
+var el = new Everlive(appSettings.everlive.apiKey);
 
 (function () {
 
