@@ -1,0 +1,49 @@
+<div data-role="view" data-title="Create Room" data-use-native-scrolling="true" data-layout="main"
+     data-init="app.CreateWeightRoom.init" data-show="app.CreateWeightRoom.show" data-model="app.CreateWeightRoom">
+    
+<div data-role="header">
+    <div data-role="navbar">
+        <span data-role="view-title">Create Room</span>
+        <a data-role="backbutton" data-align="left" data-transition="slide:right">Back</a>
+        <a data-role="button" data-align="right" href="views/home.html" data-transition="slide" data-click="app.CreateWeightRoom.create">Create</a>
+    </div>
+</div>    
+	<form action="./createRoomView.html">
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label>Date
+                    <input type="date" id="cr_weightDate" />
+                </label>
+            </li>
+            <li>
+                <label>Available From
+                    <input type="time" id="cr_weightTimeFrom" />
+                </label>
+            </li>
+            <li>
+                <label>Available To
+                    <input type="time" id="cr_weightTimeTo" />
+                </label>
+            </li>
+            <li>
+                <label>Duration (minutes)
+                    <input type="number" id="cr_weightDuration"  />
+                </label>
+            </li>
+            <li>
+                <label>Primary Body Part
+                    <select id="cr_weightPrimary">
+                        <option value="Chest">Chest</option>
+                        <option value="Back">Back</option>
+                        <option value="Legs">Legs</option>
+                    </select>
+                </label>
+            </li>
+            <li>
+            	<label>Secondary Body Part
+                    <input type="text" id="cr_weightSecondary" />
+                </label>
+            </li>
+        </ul>
+    </form>
+</div>
