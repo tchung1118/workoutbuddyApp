@@ -34,6 +34,9 @@ app.WeightSearchResults = (function () {
             listds.data(rooms);
         };
         
+        var enterRoom = function () {
+        }
+        
         return {
             init: init,
             show: show,
