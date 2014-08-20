@@ -45,7 +45,7 @@ app.WeightSearch = (function () {
             var query = new Everlive.Query();
             var dstring = req.date.val();
             dstring = "D"+dstring;
-            alert(req.stime.val());
+            //alert(req.stime.val());
             query.where().and().eq('Type', 'Weight').eq('PrimaryBodyPart', req.primBP.val()).eq('Date',dstring);
             rooms.get(query) // filter
     			.then(app.WeightSearchResults.roomscb,

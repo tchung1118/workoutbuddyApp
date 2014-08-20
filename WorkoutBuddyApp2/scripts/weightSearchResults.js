@@ -30,7 +30,7 @@ app.WeightSearchResults = (function () {
                 	});
                 }
             }
-            alert(JSON.stringify(rooms));
+            //alert(JSON.stringify(rooms));
             listds.data(rooms);
         };
         
