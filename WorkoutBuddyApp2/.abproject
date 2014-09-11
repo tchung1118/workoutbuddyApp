@@ -6,7 +6,7 @@
   "DisplayName": "WorkoutBuddyApp2",
   "Author": "",
   "Description": "WorkoutBuddyApp2",
-  "BundleVersion": "1.0",
+  "BundleVersion": "0.01",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
