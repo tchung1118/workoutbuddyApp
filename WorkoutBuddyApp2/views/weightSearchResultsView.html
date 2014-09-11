@@ -6,14 +6,14 @@
         <a data-role="backbutton" data-align="left" data-transition="slide:right">Back</a>
     	</div>
 	</div>
-    <ul id="weight-listview" data-role="listview" data-source="app.WeightSearchResults.listds" data-template="weight-tmp" data-style="inset">
+    <ul id="weight-listview" data-role="listview" data-source="app.WeightSearchResults.listds" data-template="weight-tmp" data-style="inset" data-click="app.WeightSearchResults.enterRoom">
     </ul>
     <div id="create-weight">
     	<a data-role="button" data-transition="slide" href="views/createWeightRoomView.html">Create a new room</a>
     </div>
     <script type="text/x-kendo-template" id="weight-tmp">
     	<h3 class="item-title">${PrimaryBodyPart}</h3>
-    	<p class="item-info">${WorkoutDate}</p>
-        <a data-role="button" class="details-link" data-bind="events { click: enterRoom }" href="views/WorkoutRoomView.html">Enter</a>
+    	<p class="item-info">On ${WorkoutDate} From ${StartTime} To ${EndTime}</p>
+        <a data-role="button" class="details-link" href="views/WorkoutRoomView.html" data-transition="slide">Enter</a>
   	</script>
 </div>

@@ -41,7 +41,7 @@ var el = new Everlive(appSettings.everlive.apiKey);
         skin: 'flat',
 
         // the application needs to know which view to load first
-        initial: 'views/home.html'
+        initial: 'index.html'
       });
 
     }, false);

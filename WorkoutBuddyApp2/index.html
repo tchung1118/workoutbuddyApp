@@ -21,46 +21,90 @@
     <script src="scripts/weightSearch.js"></script>
     <script src="scripts/weightSearchResults.js"></script>
     <script src="scripts/createWeightRoom.js"></script>
+    <script src="scripts/WorkoutRoom.js"></script>
 </head>
 <body>
- 
-  <div data-role="layout" data-id="main">
-    <div data-role="header">
-      <div data-role="navbar">
-        <span data-role="view-title"></span>
-        <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
-      </div>
-    </div>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '603340529774538',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
 
-    <!-- application views will be rendered here -->
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
     
-  	<div data-role="footer">
-        <div data-role="tabstrip" data-selected-index="1">
-      		<a data-role="button" data-icon="contacts" href="views/contacts.html">Profile</a>
-      		<a data-icon="favorites" href="views/home.html">WOB</a>
-    	</div>
-    </div>
-  </div>
+	<div data-role="layout" data-id="main">
+    	<div data-role="header">
+            <div data-role="navbar">
+                <a href="#appDrawer" data-align="left" data-rel="drawer" data-role="button" data-icon="drawer-button"></a>
+                <span data-role="view-title">WOB</span>
+            </div>
+        </div>
 
-  <!-- application drawer and contents -->
-  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
-    <div data-role="header">
-      <div data-role="navbar">
-        <span data-role="view-title"></span>
-      </div>
+    	<!-- application views will be rendered here -->
+		<div data-role="footer">
+        	<div data-role="tabstrip" data-selected-index="1">
+      			<a data-role="button" data-icon="contacts" href="views/contacts.html">Profile</a>
+      			<a data-icon="favorites" href="views/home.html">WOB</a>
+    		</div>
+    	</div>
+  	</div>
+
+  	<!-- application drawer and contents -->
+	<div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
+        <div data-role="header">
+      		<div data-role="navbar">
+        		<span data-role="view-title"></span>
+      		</div>
+    	</div>
+    	<ul data-role="listview">
+      		<li>
+        		<a href="views/home.html">Home</a>
+      		</li>
+      		<li>
+        		<a href="views/settings.html">Settings</a>
+     	 	</li>
+      		<li>
+        		<a href="views/contacts.html">Contacts</a>
+      		</li>
+    	</ul>
+  	</div>
+    <!-- Welcome View -->
+    <div data-role="view" data-id="welcome" id="welcome" data-model="app.Login">
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" show-faces="false"></fb:login-button>
+    	<form id="login-form">
+        	<ul data-role="listview" data-style="inset">
+          		<li>Username<input type="text" id="loginUsername" placeholder="Username" required validationMessage="Username is required!" ></li>
+          		<li>Password<input type="password" id="loginPassword" placeholder="Password" required validationMessage="Password is required!" ></li>
+        	</ul>
+      	</form>
+        <ol class="group-wrp">
+    	<li>
+            <span id="login" data-role="touch" data-bind="events: { tap: login }">
+                <a data-role="button" class="btn btn-login">Login</a>
+            </span>
+        </li>
+        <li class="oauth cf">
+            <span id="loginWithFacebook" class="oauth-item" data-role="touch" data-bind="events: { tap: loginWithFacebook }">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" show-faces="false"></fb:login-button>
+            </span>
+        </li>
+            <!--
+        <li class="signup">
+            <a data-role="button" href="views/signupView.html" class="btn-signup">Don't have an account?</a>
+        </li>-->
+    </ol>
     </div>
-    <ul data-role="listview">
-      <li>
-        <a href="views/home.html">Home</a>
-      </li>
-      <li>
-        <a href="views/settings.html">Settings</a>
-      </li>
-      <li>
-        <a href="views/contacts.html">Contacts</a>
-      </li>
-    </ul>
-  </div>       
 
 </body>
 </html>

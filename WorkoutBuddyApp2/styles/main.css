@@ -26,3 +26,66 @@
     right: 0.6em;
     top: 50%;
 }
+
+#login-form .username,
+#login-form .password {
+    position: relative;
+}
+
+#login-form .username:before,
+#login-form .password:before {
+    position: absolute;
+    top: 50%;
+    right: .75em;
+    display: block;
+    margin-top: -.5em;
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: '';
+}
+
+#welcome .group-wrp {
+    margin: -1em 1em 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#welcome .group-wrp li {
+  margin: 1.5em 0 0;
+}
+
+#welcome .group-wrp .btn {
+    display: block;
+}
+
+#welcome .group-wrp .oauth {
+    margin-right: -1%;
+    margin-left: -1%;
+}
+
+#welcome .group-wrp .oauth .oauth-item {
+    float: left;
+    margin: 0 1%;
+    width: 23%;
+}
+
+#welcome .group-wrp .oauth .btn {
+    overflow: hidden;
+    height: 45px;
+    text-indent: -999px;
+}
+
+#welcome .group-wrp .oauth .btn span,
+#welcome .group-wrp .btn-signup span {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#welcome .group-wrp .btn-signup {
+    border: 0 none;
+    background-color: transparent;
+}
