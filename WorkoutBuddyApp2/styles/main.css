@@ -5,6 +5,43 @@
     margin: .3em 25% 0 25%;
 }
 
+#register .btn-signup {
+    width: 50%;
+    margin: .3em 25% 0 25%;
+    background-color: #00ff3f;
+}
+
+#register .confirm {
+    text-align:center;
+}
+
+#register-form .text-in label{
+    width:35%;
+}
+
+#register-form .text-in input{
+    width:65%;
+}
+
+#register-form .email label{
+    width:30%;
+}
+
+#register-form .email input{
+    width:70%;
+    position:relative;
+}
+
+#register-form .domain label{
+    padding: 0 0 0 12.5%;
+    width:25%;
+}
+
+#register-form .domain select{
+    width:62.5%;
+    position:relative;
+}
+
 #weight-listview .item-title {
     float: left;
     font-size: 1em;
@@ -25,26 +62,6 @@
     position: absolute;
     right: 0.6em;
     top: 50%;
-}
-
-#login-form .username,
-#login-form .password {
-    position: relative;
-}
-
-#login-form .username:before,
-#login-form .password:before {
-    position: absolute;
-    top: 50%;
-    right: .75em;
-    display: block;
-    margin-top: -.5em;
-    width: 1em;
-    height: 1em;
-    background-color: transparent;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    content: '';
 }
 
 #welcome .group-wrp {
@@ -89,3 +106,6 @@
     border: 0 none;
     background-color: transparent;
 }
+
+
+

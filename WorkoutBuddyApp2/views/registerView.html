@@ -1,0 +1,59 @@
+<div data-role="view" data-title="Register" data-use-native-scrolling="true" data-layout="main"
+     data-init="app.Register.init" data-show="app.Register.show" data-model="app.Register" data-id="register" id="register">
+    
+<div data-role="header">    
+    <div data-role="navbar">
+        <span data-role="view-title">Register</span>
+        <a data-role="backbutton" data-align="left" data-transition="slide:right">Back</a>
+    </div>
+</div>    
+	<form id="register-form" action="./registerView.html">
+        <ul data-role="listview" data-style="inset">
+            <li class="text-in">
+                <label>First Name
+                    <input type="text" id="firstname" />
+                </label>
+            </li>
+            <li class="text-in">
+                <label>Last Name
+                    <input type="text" id="lastname" />
+                </label>
+            </li>
+            <li class="text-in">
+                <label>Username
+                    <input type="text" id="username" />
+                </label>
+            </li>
+            <li class="text-in">
+                <label>Password
+                    <input type="password" id="password"  />
+                </label>
+            </li>
+            <li>
+                <label>Repeat Password
+                    <input type="password" id="passwordRepeat"  />
+                </label>
+            </li>
+            <li class="email">
+                <label>Email
+                    <input type="text" id="email-id" />
+                </label>
+            </li>
+            <li class="domain">
+                <label>@
+                    <select id="email-domain">
+                        <option value="u.northwestern.edu">u.northwestern.edu</option>
+                        <option value="northwestern.edu">northwestern.edu</option>
+                    </select>
+                </label>
+            </li>
+        </ul>
+    </form>
+    <p class="confirm">
+        A confirmation email will be sent 
+        to your .edu email shortly.
+        Please confirm in email to verify that 
+        you are a student of Northwestern.
+    </p>
+    <a data-role="button" class="btn-signup" data-click="app.Register.register">Register</a>
+</div>
