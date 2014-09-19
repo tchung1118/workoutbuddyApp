@@ -63,35 +63,5 @@
       		</li>
     	</ul>
   	</div>
-    <!-- Welcome View -->
-    <div data-role="view" id="welcome" data-layout="default" 
-         data-init="app.Login.init" data-show="app.Login.show" data-model="app.Login">
-        <form action="./index.html">
-        	<ul data-role="listview" data-style="inset">
-                <li>
-                    <label>Username
-                        <input type="text" id="loginUsername" placeholder="Username" />
-                    </label>
-                </li>
-                <li>
-                    <label>Password
-                        <input type="password" id="loginPassword" placeholder="Password" />
-                    </label>
-                </li>
-        	</ul>
-      	</form>
-        <ol class="group-wrp">
-    	    <li>
-                <a data-role="button" class="btn btn-login" data-click="app.Login.login">Login</a>
-            </li>
-            <li class="signup">
-                <a data-role="button" href="views/registerView.html" class="btn-signup" data-transition="slide">Don't have an account? Register now!</a>
-            </li>
-            <li class="signup">
-                <a data-role="button" href="views/home.html" class="btn-signup" data-transition="slide">Continue without registering</a>
-            </li>
-        </ol>
-    </div>
-
 </body>
 </html>

@@ -20,7 +20,7 @@ app.Login = (function () {
         var login = function () {
             var username = $loginUsername.val();
             var password = $loginPassword.val();
-            alert(username);
+            
 
             // Authenticate using the username and password
             el.Users.login(username, password)
@@ -30,12 +30,12 @@ app.Login = (function () {
                 if (isAnalytics) {
                     analytics.TrackFeature('Login.Regular');
                 }*/
-                alert("load users");
+                
                 return app.Users.load();
             })
             .then(function () {
-                alert("going to home");
-                app.navigate('views/home.html');
+                
+                app.mobileApp.navigate('views/home.html');
             })
             .then(null,
                   function (err) {
