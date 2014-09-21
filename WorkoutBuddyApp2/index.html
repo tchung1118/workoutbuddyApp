@@ -25,13 +25,14 @@
     <script src="scripts/login.js"></script>
     <script src="scripts/users.js"></script>
     <script src="scripts/register.js"></script>
+    <script src="scripts/profile.js"></script>
 </head>
 <body>
     
 	<div data-role="layout" data-id="main">
     	<div data-role="header">
             <div data-role="navbar">
-                <a href="#appDrawer" data-align="left" data-rel="drawer" data-role="button" data-icon="drawer-button"></a>
+                <a id="custom-drawer" href="#appDrawer" data-align="left" data-rel="drawer" data-role="button" data-icon="drawer-button"></a>
                 <span data-role="view-title">WOB</span>
             </div>
         </div>
@@ -42,6 +43,15 @@
     
     <div data-role="layout" data-id="default">
         
+    </div>
+    
+    <div data-role="layout" data-id="subpage">
+        <div data-role="header">
+            <div data-role="navbar">
+                <a id="custom-back" data-role="backbutton" data-align="left" data-transition="slide:right" data-icon="back-button"></a>
+                <span data-role="view-title"></span>
+            </div>
+        </div>
     </div>
 
   	<!-- application drawer and contents -->
@@ -56,11 +66,14 @@
         		<a href="views/home.html">Home</a>
       		</li>
       		<li>
-        		<a href="views/settings.html">Settings</a>
+                <a href="views/profile.html">Profile</a>
      	 	</li>
       		<li>
-        		<a href="views/contacts.html">Contacts</a>
+        		<a href="views/myScheduleView.html">My Schedule</a>
       		</li>
+            <li>
+                <a>My Proposal/Invitation</a>
+            </li>
     	</ul>
   	</div>
 </body>

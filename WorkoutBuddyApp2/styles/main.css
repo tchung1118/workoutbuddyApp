@@ -1,5 +1,17 @@
 .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
 
+.km-back-button:before, .km-back-button:after { content: "\e013"; }
+
+#custom-drawer {
+    border: 0 none;
+    background-color: transparent;
+}
+
+#custom-back {
+    border: 0 none;
+    background-color: transparent;
+}
+
 #create-weight {
     width: 50%;
     margin: .3em 25% 0 25%;
@@ -20,6 +32,10 @@
 }
 
 #register-form .text-in input{
+    width:65%;
+}
+
+#register-form .text-in select{
     width:65%;
 }
 
@@ -107,5 +123,24 @@
     background-color: transparent;
 }
 
+#home .btn {
+    width: 100%;
+    border: 0 none;
+    background-color: transparent;
+}
 
+#home .weight {
+    background-image: url(images/weight_stock.jpg);
+}
 
+#home .head {
+    display: block;
+	margin: 0;
+	height: 13em;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+}
+
+#home .cardio {
+    background-image: url(images/cardio_stock.jpg);
+}

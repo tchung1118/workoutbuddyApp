@@ -6,6 +6,7 @@ app.Register = (function () {
 
     var registerModel = (function () {
         var fname, lname, uname, pw, pwrepeat, email, domain, gender;
+        var dataSource;
         
         var init = function () {
             fname=$('#firstname');
@@ -25,6 +26,7 @@ app.Register = (function () {
             pw.val('');
             pwrepeat.val('');
             email.val('');
+            gender.val('0');
             dataSource = kendo.observable({
                 Username: '',
                 Password: '',
@@ -35,19 +37,37 @@ app.Register = (function () {
             });
         };
         
-        var validateFields() {
-            var allUsers = el.Users.get();
-            alert(JSON.stringify(allUsers));
+        
+        var validateFields = function() {
+            if (pw.val() != pwrepeat.val()) {
+                alert ("Passwords do not match!")
+                return false;
+            }
+            
+            if (gender.val() == "0") {
+                alert("You have to select your gender!");
+                return false;
+            }
+            
             return true;
-        }
+        };
         
         var register = function () {
-            if (validateFields()) {
+            var flag = validateFields();
+            if (flag) {
                 dataSource.Username=uname.val();
                 dataSource.Password=pw.val();
                 dataSource.DisplayName=fname.val()+" "+lname.val();
                 dataSource.Email=email.val()+"@"+domain.val();
                 dataSource.Gender=parseInt(gender.val());
+                el.Users.register(dataSource.Username, dataSource.Password, dataSource,
+                                 function (data) {
+                                    alert("Registration successful");
+                                    app.mobileApp.navigate('views/welcome.html');
+                                },
+                                function(error){
+                                    alert(JSON.stringify(error));
+                                });
             } else {
                 return;
             }

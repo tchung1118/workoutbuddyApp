@@ -11,8 +11,7 @@ var app = (function () {
         skin: 'flat',
 
         // the application needs to know which view to load first
-        initial: 'views/welcome.html',
-        transition: "slide"
+        initial: 'views/home.html'
       });
 
     // create an object to store the models for each view
