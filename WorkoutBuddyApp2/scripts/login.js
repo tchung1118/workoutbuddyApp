@@ -34,7 +34,7 @@ app.Login = (function () {
                 return app.Users.load();
             })
             .then(function () {
-                app.mobileApp.navigate(app.returnView);
+                app.mobileApp.replace(app.returnView);
             })
             .then(null,
                   function (err) {

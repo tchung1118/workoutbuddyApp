@@ -11,8 +11,12 @@ var app = (function () {
         skin: 'flat',
 
         // the application needs to know which view to load first
-        initial: 'views/mains/home.html'
+        initial: 'index.html'
       });
+    
+    var navToHome = function () {
+        setTimeout(function(){app.mobileApp.navigate('views/mains/home.html');},3000);
+    }
 
     // create an object to store the models for each view
     window.APP = {
@@ -44,5 +48,6 @@ var app = (function () {
 
     }, false);
 
-    return {mobileApp:mobileApp};
+    return {mobileApp:mobileApp,
+            navToHome:navToHome};
 }());
