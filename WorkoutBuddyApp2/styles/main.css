@@ -2,6 +2,8 @@
 
 .km-back-button:before, .km-back-button:after { content: "\e013"; }
 
+.km-stats-button:before, .km-stats-button:after { content: "\e051"; }
+
 #custom-drawer {
     border: 0 none;
     background-color: transparent;

@@ -19,17 +19,33 @@
     <script src="scripts/settings.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/weightSearch.js"></script>
+    <script src="scripts/cardioSearch.js"></script>
     <script src="scripts/weightSearchResults.js"></script>
     <script src="scripts/createWeightRoom.js"></script>
     <script src="scripts/WorkoutRoom.js"></script>
     <script src="scripts/login.js"></script>
     <script src="scripts/users.js"></script>
     <script src="scripts/register.js"></script>
-    <script src="scripts/profile.js"></script>
+    <script src="scripts/profileStats.js"></script>
+    <script src="scripts/profileHistory.js"></script>
+    <script src="scripts/schedule.js"></script>
 </head>
 <body>
     
 	<div data-role="layout" data-id="main">
+    	<div data-role="header">
+            <div data-role="navbar">
+                <a id="custom-drawer" href="#appDrawer" data-align="left" data-rel="drawer" data-role="button" data-icon="drawer-button"></a>
+                <a id="custom-drawer" href="#searchDrawer" data-align="right" data-rel="drawer" data-role="button" data-icon="search"></a>
+                <span data-role="view-title">WOB</span>
+            </div>
+        </div>
+
+    	<!-- application views will be rendered here -->
+		
+  	</div>
+    
+    <div data-role="layout" data-id="main-profile">
     	<div data-role="header">
             <div data-role="navbar">
                 <a id="custom-drawer" href="#appDrawer" data-align="left" data-rel="drawer" data-role="button" data-icon="drawer-button"></a>
@@ -38,6 +54,13 @@
         </div>
 
     	<!-- application views will be rendered here -->
+        
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a href="views/mains/profileStats.html" data-icon="stats-button">Stats</a>
+                <a href="views/mains/profileHistory.html" data-icon="history">History</a>
+            </div>
+        </div>
 		
   	</div>
     
@@ -55,7 +78,7 @@
     </div>
 
   	<!-- application drawer and contents -->
-	<div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
+	<div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation" data-position="left">
         <div data-role="header">
       		<div data-role="navbar">
         		<span data-role="view-title"></span>
@@ -63,18 +86,30 @@
     	</div>
     	<ul data-role="listview">
       		<li>
-        		<a href="views/home.html">Home</a>
+                <a href="views/mains/home.html">Home</a>
       		</li>
       		<li>
-                <a href="views/profile.html">Profile</a>
+                <a href="views/mains/profileStats.html">Profile</a>
      	 	</li>
       		<li>
-        		<a href="views/myScheduleView.html">My Schedule</a>
+                <a href="views/mains/myScheduleView.html">My Schedule</a>
       		</li>
             <li>
                 <a>My Proposal/Invitation</a>
             </li>
+            <li>
+                <a>Logout</a>
+            </li>
     	</ul>
   	</div>
+    
+    <div data-role="drawer" id="searchDrawer" style="width: 270px" data-title="Search" data-position="right">
+        <div data-role="header">
+           
+        </div>
+        <input type="text" style="width:95%; top-margin: .1em; left-margin:2.5%; font-size:1.2em;" id="searchpeople" />
+        <ul data-role="listview">
+        </ul>
+    </div>
 </body>
 </html>

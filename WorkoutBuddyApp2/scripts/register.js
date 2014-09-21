@@ -63,7 +63,7 @@ app.Register = (function () {
                 el.Users.register(dataSource.Username, dataSource.Password, dataSource,
                                  function (data) {
                                     alert("Registration successful");
-                                    app.mobileApp.navigate('views/welcome.html');
+                                    app.mobileApp.navigate('views/mains/welcome.html');
                                 },
                                 function(error){
                                     alert(JSON.stringify(error));

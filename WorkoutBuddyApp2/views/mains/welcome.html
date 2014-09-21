@@ -1,6 +1,6 @@
-<div data-role="view" id="welcome" data-use-native-scrolling="true" data-layout="default"
-     data-init="app.Login.init" data-show="app.Login.show" data-model="app.Login" data-id="welcome">
-        <form action="./index.html">
+<div data-role="view" data-title="Login" data-use-native-scrolling="true" data-layout="main"
+     data-init="app.Login.init" data-show="app.Login.show" data-model="app.Login" id="welcome" data-id="welcome">
+        <form action="./welcome.html">
         	<ul data-role="listview" data-style="inset">
                 <li>
                     <label>Username
@@ -19,7 +19,7 @@
                 <a data-role="button" class="btn btn-login" data-click="app.Login.login">Login</a>
             </li>
             <li class="signup">
-                <a data-role="button" href="views/registerView.html" class="btn-signup" data-transition="slide">Don't have an account? Register now!</a>
+                <a data-role="button" href="views/subs/registerView.html" class="btn-signup" data-transition="slide">Don't have an account? Register now!</a>
             </li>
         </ol>
     </div>
